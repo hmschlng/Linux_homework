@@ -2,7 +2,7 @@
 #include <time.h>
 
 int main(){
-
+	
         printf("조교님들 강의하느라 고생하셨습니다.\n");
 	printf("지루하지않고 재밌었어요^^\n");
 
@@ -35,7 +35,8 @@ int main(){
 	
 	printf("Hi~~!!\n");
 
-
+	time_t t=time(NULL);
+	struct tm tm=*localtime(&t);
 	printf("Hi there~! Today is the duedate of this assignment.\n");
 	if((tm.tm_year + 1900 <= 2020) && (tm.tm_mon + 1 <= 6) && (tm.tm_mday < 2)){
 		printf("now is %d-%d-%d %d:%d:%d\n",tm.tm_year+1900, tm.tm_mon+1, tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec);
